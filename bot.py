@@ -66,7 +66,7 @@ async def _play(ctx):
     """Can you ask if Rosa can play?"""
     now = datetime.datetime.now().hour
 
-    if 10 <= now <= 22:
+    if 10 < now < 22:
         await ctx.send('If you ask now, it is a possibility that Rosa will play.')
     else:
         await ctx.send('If you ask now, it is unlikely that Rosa will play.')
@@ -76,8 +76,6 @@ async def _play(ctx):
 async def _ask(ctx):
     """Asks Rosa if she wants to play."""
     await ctx.send('<@!188430660648566790>, let\'s play!')
-
-
 # End Rosa Commands
 
 
